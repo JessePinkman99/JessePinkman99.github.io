@@ -6,15 +6,47 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>如何搭建hexo博客并同步到GitHub仓库(Windows) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="为什么要搭建个人博客？ 记录知识点或者学习过程中遇到的坑，下次遇到可以看博客； 部署到GitHub后可以让其他人看见，达到知识共享的目的，给自己一种成就感，并且可以保证自己的博客不会因为电脑的原因而丢失； 个人博客可以自己定义风格，比在平台上搭建的博客更随心所欲； 最重要的一点：用来装bei   什么是hexo？ hexo是一种基于nodejs的静态博客框架，它的风格简约大方，受到很多人的青睐，因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何搭建hexo博客并同步到GitHub仓库(Windows)">
+<meta property="og:url" content="http://yoursite.com/2020/04/22/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0GitHub%E4%BB%93%E5%BA%93-Windows/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="为什么要搭建个人博客？ 记录知识点或者学习过程中遇到的坑，下次遇到可以看博客； 部署到GitHub后可以让其他人看见，达到知识共享的目的，给自己一种成就感，并且可以保证自己的博客不会因为电脑的原因而丢失； 个人博客可以自己定义风格，比在平台上搭建的博客更随心所欲； 最重要的一点：用来装bei   什么是hexo？ hexo是一种基于nodejs的静态博客框架，它的风格简约大方，受到很多人的青睐，因">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtCPwn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAlR0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAGsU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAtZ4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAdiR.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAVsS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAmZQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAQGq.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtA8MT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtV1DU.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtA1zV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAPPI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtApad.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAuIs.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAiGt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAwJ1.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVR2t.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVL2q.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVJUJ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVY59.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVMvV.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVu3q.md.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVqGn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtV65d.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVgPA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtVOx0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/22/JtAkxf.png">
+<meta property="article:published_time" content="2020-04-22T03:50:33.000Z">
+<meta property="article:modified_time" content="2020-04-22T04:38:59.061Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/22/JtCPwn.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,76 +182,250 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-如何搭建hexo博客并同步到GitHub仓库-Windows" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      如何搭建hexo博客并同步到GitHub仓库(Windows)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/22/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0GitHub%E4%BB%93%E5%BA%93-Windows/" class="archive-article-date">
+
+        
+        <a href="/2020/04/22/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0GitHub%E4%BB%93%E5%BA%93-Windows/" class="archive-article-date">
   	<time datetime="2020-04-22T03:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/22/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0GitHub%E4%BB%93%E5%BA%93-Windows/">如何搭建hexo博客并同步到GitHub仓库(Windows)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="为什么要搭建个人博客？"><a href="#为什么要搭建个人博客？" class="headerlink" title="为什么要搭建个人博客？"></a>为什么要搭建个人博客？</h3><ul>
+<li>记录知识点或者学习过程中遇到的坑，下次遇到可以看博客；</li>
+<li>部署到GitHub后可以让其他人看见，达到知识共享的目的，给自己一种成就感，并且可以保证自己的博客不会因为电脑的原因而丢失；</li>
+<li>个人博客可以自己定义风格，比在平台上搭建的博客更随心所欲；</li>
+<li>最重要的一点：<del>用来装bei</del></li>
+</ul>
+<hr>
+<h3 id="什么是hexo？"><a href="#什么是hexo？" class="headerlink" title="什么是hexo？"></a>什么是hexo？</h3><ul>
+<li>hexo是一种基于nodejs的静态博客框架，它的风格简约大方，受到很多人的青睐，因此在搭建博客或者周后写博客的过程中遇到问题，很快就能在网上找到解决方法。另外，虽说基于nodejs，但搭建的过程并不需要任何一句nodejs的语法，搭建过程也很简单。</li>
+</ul>
+<hr>
+<h3 id="如何搭建hexo博客？"><a href="#如何搭建hexo博客？" class="headerlink" title="如何搭建hexo博客？"></a>如何搭建hexo博客？</h3><h5 id="1-访问wwww-nodejs-org-下载nodejs-选择LTS长期支持版本；"><a href="#1-访问wwww-nodejs-org-下载nodejs-选择LTS长期支持版本；" class="headerlink" title="1.访问wwww.nodejs.org,下载nodejs,选择LTS长期支持版本；"></a>1.访问<a href="www.nodejs.org">wwww.nodejs.org</a>,下载nodejs,选择LTS长期支持版本；</h5><p><img src="https://s1.ax1x.com/2020/04/22/JtCPwn.png" alt="JtCPwn.png"></p>
+<h5 id="2-按win-r，进入cmd命令行界面，检测nodejs和npm是否已经正确安装-npm是一种包管理器，会随着nodejs一起下载到本地；"><a href="#2-按win-r，进入cmd命令行界面，检测nodejs和npm是否已经正确安装-npm是一种包管理器，会随着nodejs一起下载到本地；" class="headerlink" title="2.按win+r，进入cmd命令行界面，检测nodejs和npm是否已经正确安装,npm是一种包管理器，会随着nodejs一起下载到本地；"></a>2.按win+r，进入cmd命令行界面，检测nodejs和npm是否已经正确安装,npm是一种包管理器，会随着nodejs一起下载到本地；</h5><p><code>node -v</code></p>
+<p><code>npm -v</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAlR0.png" alt="JtAlR0.png"></p>
+<h5 id="3-下载cnpm-因为用npm下载包非常的慢，所以我们先下载npm在国内的镜像cnpm-然后验证其版本号；"><a href="#3-下载cnpm-因为用npm下载包非常的慢，所以我们先下载npm在国内的镜像cnpm-然后验证其版本号；" class="headerlink" title="3.下载cnpm,因为用npm下载包非常的慢，所以我们先下载npm在国内的镜像cnpm,然后验证其版本号；"></a>3.下载cnpm,因为用npm下载包非常的慢，所以我们先下载npm在国内的镜像cnpm,然后验证其版本号；</h5><p><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p><code>cnpm -v</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAGsU.png" alt="JtAGsU.png"></p>
+<h5 id="4-利用cnpm下载hexo框架；"><a href="#4-利用cnpm下载hexo框架；" class="headerlink" title="4.利用cnpm下载hexo框架；"></a>4.利用cnpm下载hexo框架；</h5><p><code>cnpm install -g hexo-cli</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAtZ4.png" alt="JtAtZ4.png"></p>
+<h5 id="5-创建你的博客文件夹，你可以直接用命令行在当前目录创建-一般是在C盘），然后cd命令进入文件夹，或者，通过鼠标右键在你想要的位置创建，然后cd命令进入文件夹的位置；"><a href="#5-创建你的博客文件夹，你可以直接用命令行在当前目录创建-一般是在C盘），然后cd命令进入文件夹，或者，通过鼠标右键在你想要的位置创建，然后cd命令进入文件夹的位置；" class="headerlink" title="5.创建你的博客文件夹，你可以直接用命令行在当前目录创建(一般是在C盘），然后cd命令进入文件夹，或者，通过鼠标右键在你想要的位置创建，然后cd命令进入文件夹的位置；"></a>5.创建你的博客文件夹，你可以直接用命令行在当前目录创建(一般是在C盘），然后cd命令进入文件夹，或者，通过鼠标右键在你想要的位置创建，然后cd命令进入文件夹的位置；</h5><ul>
+<li><code>mkdir testblog</code>  <code>cd testblog</code> mkdir为创建文件夹命令，testblog为文件夹名字；</li>
+<li>自定义位置，以在桌面为例：<code>cd C:\Users\Administrator\Desktop\testblog</code>;</li>
+</ul>
+<h5 id="6-初始化博客；"><a href="#6-初始化博客；" class="headerlink" title="6.初始化博客；"></a>6.初始化博客；</h5><p><code>hexo init</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAdiR.png" alt="JtAdiR.png"></p>
+<h5 id="7-清理缓存，生成静态文件；"><a href="#7-清理缓存，生成静态文件；" class="headerlink" title="7.清理缓存，生成静态文件；"></a>7.清理缓存，生成静态文件；</h5><p><code>hexo c</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAVsS.png" alt="JtAVsS.png"></p>
+<p><code>hexo g</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAmZQ.png" alt="JtAmZQ.png"></p>
+<h5 id="8-启动本地服务器；"><a href="#8-启动本地服务器；" class="headerlink" title="8.启动本地服务器；"></a>8.启动本地服务器；</h5><p><code>hexo s</code></p>
+<h5 id="9-起飞！！！！！"><a href="#9-起飞！！！！！" class="headerlink" title="9.起飞！！！！！"></a>9.起飞！！！！！</h5><p><img src="https://s1.ax1x.com/2020/04/22/JtAQGq.jpg" alt="JtAQGq.jpg"></p>
+<p>​                                                                       <a href="localhost:4000" title="localhost:4000"><strong>点这里跟着马老师起飞!!!</strong></a></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtA8MT.png" alt="JtA8MT.png"></p>
+<hr>
+<h3 id="怎么把博客同步到自己的GitHub仓库？"><a href="#怎么把博客同步到自己的GitHub仓库？" class="headerlink" title="怎么把博客同步到自己的GitHub仓库？"></a>怎么把博客同步到自己的GitHub仓库？</h3><h5 id="1-登录GitHub账号，新建一个仓库；"><a href="#1-登录GitHub账号，新建一个仓库；" class="headerlink" title="1.登录GitHub账号，新建一个仓库；"></a>1.登录GitHub账号，新建一个仓库；</h5><p><strong>确保你的仓库名的格式为:GitHub的名字加github加io，如图所示；并且勾选上readme</strong></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtV1DU.png" alt="JtV1DU.png"></p>
+<h5 id="2-获取你的仓库url-点击Clone-or-download，然后选择协议，点右边的复制标志-；"><a href="#2-获取你的仓库url-点击Clone-or-download，然后选择协议，点右边的复制标志-；" class="headerlink" title="2.获取你的仓库url(点击Clone or download，然后选择协议，点右边的复制标志)；"></a>2.获取你的仓库url(点击Clone or download，然后选择协议，点右边的复制标志)；</h5><p>这里有两种url，一种是走<strong><em>https协议</em></strong>的，另一种是走<strong><em>ssh协议</em></strong>的，两种的安全性都有保障，但从操作的角度来说，<strong>ssh操作稍微复杂但一劳永逸，https操作简单但每次同步都要输入账号密码</strong>；</p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtA1zV.png" alt="JtA1zV.png"></p>
+<h5 id="3-更改配置文件；"><a href="#3-更改配置文件；" class="headerlink" title="3.更改配置文件；"></a>3.更改配置文件；</h5><ul>
+<li>进入你的blog文件夹，打开_config.yml文件，用记事本或者notepad等都可以，；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAPPI.png" alt="JtAPPI.png"></p>
+<ul>
+<li>拉到最下面，找到Deployment这一项；</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtApad.png" alt="JtApad.png"></p>
+<ul>
+<li>更改如下，repo的值即为刚刚复制的url地址；<br><strong>注意！！每一条的冒号后都必须有一个英文空格</strong></li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAuIs.png" alt="JtAuIs.png"></p>
+<ul>
+<li>保存退出。</li>
+</ul>
+<h5 id="4-下载插件；"><a href="#4-下载插件；" class="headerlink" title="4.下载插件；"></a>4.下载插件；</h5><p><code>cnpm install --save hexo-deployer-git</code></p>
+<img src="https://s1.ax1x.com/2020/04/22/JtAiGt.png" alt="JtAiGt.png" style="zoom:150%;" />
 
-        <div class="article-info info-on-right">
-          
-          
+<h5 id="5-尝试上传到GitHub发现出错；"><a href="#5-尝试上传到GitHub发现出错；" class="headerlink" title="5.尝试上传到GitHub发现出错；"></a>5.尝试上传到GitHub发现出错；</h5><p>错误原因：刚才我们通过url知道GitHub仓库是谁，但这个仓库并不认识我们，我们“无名无姓”，是不可以上传的！！</p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAwJ1.jpg" alt="JtAwJ1.jpg"></p>
+<h5 id="6-下载安装Git工具，然后找到安装目录或者在开始菜单打开git-bash-exe；"><a href="#6-下载安装Git工具，然后找到安装目录或者在开始菜单打开git-bash-exe；" class="headerlink" title="6.下载安装Git工具，然后找到安装目录或者在开始菜单打开git-bash.exe；"></a>6.下载安装Git工具，然后找到安装目录或者在开始菜单打开git-bash.exe；</h5><p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtVR2t.png" alt="JtVR2t.png"><br><img src="https://s1.ax1x.com/2020/04/22/JtVL2q.png" alt="JtVL2q.png"><br><img src="https://s1.ax1x.com/2020/04/22/JtVJUJ.png" alt="JtVJUJ.png"><br><img src="https://s1.ax1x.com/2020/04/22/JtVY59.png" alt="JtVY59.png"></p>
+<h5 id="7-创建用户和邮箱；"><a href="#7-创建用户和邮箱；" class="headerlink" title="7.创建用户和邮箱；"></a>7.创建用户和邮箱；</h5><p><strong>这里的用户名和邮箱最好和GitHub相同，方便记忆，不同也没什么关系</strong><br><strong>gitbash里面是不能用ctrl+c和ctrl+v的，直接右键复制粘贴</strong>                 </p>
+<p><code>git config --global user.name &quot;yourname&quot;</code><br><code>git config --global user.email &quot;yourname@163.com&quot;</code></p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtVMvV.png" alt="JtVMvV.png"></p>
+<blockquote>
+<p><strong>对于前面选择ssh协议的朋友来说，还有操作（https的请下一步）</strong></p>
+<ul>
+<li>创建SSH秘钥                                                                  </li>
+</ul>
+<p><code>ssh-keygen -t rsa -C &quot;yourname@163.com&quot;</code>                                      </p>
+<p>这里后面的邮箱就是刚才注册的邮箱</p>
+<p><a href="https://imgchr.com/i/JtVu3q" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2020/04/22/JtVu3q.md.png" alt="JtVu3q.md.png"></a></p>
+<ul>
+<li>复制SSH秘钥<br>进入到根目录，一般是C:\Users\Administrator,上图中有，打开id_rsa.pub文件，复制秘钥</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtVqGn.png" alt="JtVqGn.png"></p>
+<ul>
+<li>回到GitHub界面，点击右边小头像，选择settings;</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtV65d.png" alt="JtV65d.png"></p>
+<ul>
+<li>点击SSH and GPG keys</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtVgPA.png" alt="JtVgPA.png"></p>
+<ul>
+<li>粘贴秘钥</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtVOx0.png" alt="JtVOx0.png"></p>
+<p>搞定！</p>
+</blockquote>
+<h5 id="8-上传博客到GitHub；"><a href="#8-上传博客到GitHub；" class="headerlink" title="8.上传博客到GitHub；"></a>8.上传博客到GitHub；</h5><p>回到命令行界面，不是gitbash界面！<br><code>hexo c</code><br><code>hexo g</code><br><code>hexo d</code>                                                                               </p>
+<p>对于选择<strong><em>https</em></strong>的朋友来说，他会提示你输入账号密码，即GitHub的账号密码，依次输入，回车，注意密码的输入是<strong>隐式</strong>的！<br>对于选择<strong><em>ssh</em></strong>的朋友来说，就直接成功了！</p>
+<p><img src="https://s1.ax1x.com/2020/04/22/JtAkxf.png" alt="JtAkxf.png"></p>
+<h5 id="9-回到GitHub，刷新界面，会发现仓库里已经和博客文件夹同步了！"><a href="#9-回到GitHub，刷新界面，会发现仓库里已经和博客文件夹同步了！" class="headerlink" title="9.回到GitHub，刷新界面，会发现仓库里已经和博客文件夹同步了！"></a>9.回到GitHub，刷新界面，会发现仓库里已经和博客文件夹同步了！</h5><hr>
+<h3 id="如何写博客呢？"><a href="#如何写博客呢？" class="headerlink" title="如何写博客呢？"></a>如何写博客呢？</h3><p>用命令行输入<code>hexo n &quot;blogname&quot;</code>指令创建一片新的博客，然后到…blog\source\_posts文件夹下打开刚刚创建的blogname.md文件，需要用支持Markdown格式的编辑器打开(Visual Code、Typora等），写好博客(不知道Markdown语法的朋友自行百度，很简单)，保存退出，回到命令行界面，依次执行<code>hexo c</code>,<code>hexo g</code>,<code>hexo s</code>，再访问<a href="localhost:4000">localhost:4000</a>就能看到写好的博客已经发上传了，如果要同步到GitHub，<code>hexo d</code>。</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/22/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0GitHub%E4%BB%93%E5%BA%93-Windows/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/21/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-21T12:44:40.489Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/21/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -242,8 +448,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
